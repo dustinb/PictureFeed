@@ -26,7 +26,8 @@
     <preference name="DisallowOverscroll" value="true" />
     
     <gap:plugin name="org.apache.cordova.camera" version="0.3.2" />
-   
+    <gap:plugin name="com.chanthu.evri.gcs-file-transfer" version="1.0.0" />
+    
     <icon src="icon.png" />
     <icon gap:density="ldpi" gap:platform="android" src="res/icon/android/icon-36-ldpi.png" />
     <icon gap:density="mdpi" gap:platform="android" src="res/icon/android/icon-48-mdpi.png" />
