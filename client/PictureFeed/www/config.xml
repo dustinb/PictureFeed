@@ -25,9 +25,8 @@
     <preference name="android-installLocation" value="auto" />
     <preference name="DisallowOverscroll" value="true" />
     
-    <plugin name="Camera" value="org.apache.cordova.CameraLauncher" />
+    <gap:plugin name="org.apache.cordova.camera" version="0.3.2" />
    
-
     <icon src="icon.png" />
     <icon gap:density="ldpi" gap:platform="android" src="res/icon/android/icon-36-ldpi.png" />
     <icon gap:density="mdpi" gap:platform="android" src="res/icon/android/icon-48-mdpi.png" />
