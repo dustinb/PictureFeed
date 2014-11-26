@@ -9,7 +9,7 @@
             $.ajax({url: serverURL + "/api/squares", dataType: "json", type: "GET"}).done(function (data) {
                 var l = data.length;
                 for (var i = 0; i < l; i++) {
-                    $scroller.append('<img src="' + serverURL + '/' + data[i].ownFileList[0].size194.path + '"/>');
+                    $scroller.append('<img src="' + serverURL + '/' + data[i].ownFileList[0].size433.path + '"/>');
                 }
             });
         },
