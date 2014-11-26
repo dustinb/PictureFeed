@@ -1,15 +1,15 @@
 (function () {
 
-    var serverURL = "http://192.168.1.4:3000", // IMPORTANT: This URL needs to be accessible from your phone for testing.
+    var serverURL = "http://squares.roundporch.com", // IMPORTANT: This URL needs to be accessible from your phone for testing.
         $scroller = $('.scroller'),
 
         // Get List of images from server
         getFeed = function () {
             $scroller.empty();
-            $.ajax({url: serverURL + "/images", dataType: "json", type: "GET"}).done(function (data) {
+            $.ajax({url: serverURL + "/api/squares", dataType: "json", type: "GET"}).done(function (data) {
                 var l = data.length;
                 for (var i = 0; i < l; i++) {
-                    $scroller.append('<img src="' + serverURL + '/' + data[i].fileName + '"/>');
+                    $scroller.append('<img src="' + serverURL + '/' + data[i].ownFileList[0].size194.path + '"/>');
                 }
             });
         },
@@ -27,7 +27,7 @@
                 "description": "Uploaded from my phone"
             };
 
-            ft.upload(imageURI, serverURL + "/images",
+            ft.upload(imageURI, serverURL + "/upload",
                 function (e) {
                     getFeed();
                 },
